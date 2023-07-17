@@ -1,26 +1,13 @@
 import { useLoaderData } from 'react-router-dom'
 import './App.css'
-//import { useState } from 'react';
-//import CoffeeCard from './components/CoffeeCard';
+import { useState } from 'react';
+import CoffeeCard from './components/CoffeeCard';
 
 function App() { 
-  const loadedCoffees = useLoaderData();
-  //const [coffees, setCoffees] =useState(loadedCoffees);
+  const coffees = useLoaderData();
+  const [coffees, setCoffees] =useState(loadedCoffees);
   return (
-    <div >
-      
-      <h1 className='text-6xl text-center my-20 text-purple-600'>Hot Hot Cold Coffee: {coffees.length}</h1>
-      
-      
-    </div>
-
-
-  )
-}
-
-export default App
-
-{/* <div className='m-20'>
+    <div className='m-20'>
       
       <h1 className='text-6xl text-center my-20 text-purple-600'>Hot Hot Cold Coffee: {coffees.length}</h1>
       <div className='grid md:grid-cols-2 gap-4'>
@@ -34,4 +21,9 @@ export default App
         }
       </div>
       
-    </div> */}
+    </div>
+  )
+}
+
+export default App
+
