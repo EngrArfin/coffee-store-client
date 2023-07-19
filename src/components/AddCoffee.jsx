@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 const AddCoffee = () => {
   const handleAddCoffee = event =>{
     event.preventDefault();
+
     const form = event.target;
 
     const name = form.name.value;
@@ -15,6 +16,7 @@ const AddCoffee = () => {
     const photo = form.photo.value;
 
     const newCoffee = {name, quantity, supplier, taste, category, details, photo}
+    
     console.log(newCoffee);
 
      //send data to the server 
@@ -127,10 +129,7 @@ const AddCoffee = () => {
               <span className="label-text">Photo URL</span>
             </label>
             <label className="input-group">
-              <input
-                type="text" name="photo" placeholder="Photo URL"
-                className="input input-bordered w-full"
-              />
+            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
             </label>
           </div>
         </div>

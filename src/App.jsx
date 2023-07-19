@@ -1,11 +1,13 @@
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom';
 import './App.css'
-import { useState } from 'react';
+
 import CoffeeCard from './components/CoffeeCard';
+import { useState } from 'react';
 
 function App() { 
-  const coffees = useLoaderData();
-  const [coffees, setCoffees] =useState(loadedCoffees);
+  const loadedCoffees = useLoaderData();
+  const [coffees, setCoffees] = useState(loadedCoffees)
+
   return (
     <div className='m-20'>
       
